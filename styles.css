@@ -1,3 +1,12 @@
 body {
     background-color: rgba(250,240,230,0.75);
 }
+img {
+    border-radius: 50px;
+    border: 5px solid dimgray;
+}
+h1 {
+    font-size: 50px;
+    font-family: "Schnyder", Georgia, serif;
+}
+<!-- https://lauren-waller.com/-->
