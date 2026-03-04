@@ -1,7 +1,7 @@
 body {
     background-color: rgba(250,240,230,0.75);
 }
-img {
+.homePage img {
     border-radius: 50px;
     border: 5px solid dimgray;
 }
@@ -9,4 +9,22 @@ h1 {
     font-size: 50px;
     font-family: "Schnyder", Georgia, serif;
 }
-<!-- https://lauren-waller.com/-->
+.homePage {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    min-height: 100vh;
+    gap: 4rem;
+
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.homePage div {
+    text-align: left;
+    font-size: 50px;
+    font-family: "Schnyder", Georgia, serif;
+}
+
