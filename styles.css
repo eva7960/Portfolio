@@ -1,43 +1,47 @@
-/* ALL HOMEPAGE CSS */
-.bodyGrid {
+/* CSS for entire website */
+body {
     background-color: rgba(250,240,230,0.75);
-    display: grid;
+}
+
+
+/* HOMEPAGE CSS */
+.bodyGrid {
     place-items: center; /*horizontally centered on page*/
-    min-height: 100vh; /*vertically centered on page*/
     overflow: hidden; /*prevents page from expanding and being able to scroll down*/
 }
-.imageGrid img {
+.centerGrid img {
     border-radius: 50px;
-    border: 5px solid dimgray;
-    width: 400px;
-    height: 600px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); /*drop shadow*/
+    width: 345px;
+    height: 445px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /*drop shadow*/
 }
-.imageGrid p {
+.centerGrid p {
     margin-top: 12px;       /* Adds some space between the photo and text */
     font-size: 20px;
-}
-h1 {
-    font-size: 50px;
-    font-family: "Schnyder", Georgia, serif;
+    padding-left: 10px;
 }
 .centerGrid {
     display: grid;
     grid-template-columns: auto 1fr; /* makes a grid with 2 columns*/
-    align-items: center; /*vertically centers grid on page*/
-    gap: 2rem; /*distance between photo and words on homepage*/
+    align-items: start; /*vertically centers grid on page*/
 
+    place-items: center;
+    min-height: 100vh;
 }
-.bodyGrid div a {
+.centerGrid div a {
     color: black;
     text-align: left;
-    font-size: 160px;
+    font-size: 100px;
     font-family: "Schnyder", Georgia, serif;
     margin: 1rem; /*vertical spacing in between each word*/
     text-decoration: none; /*gets rid of underline for hypertext*/
+    line-height: 145px;
 }
-.bodyGrid div a:hover {
+.centerGrid div a:hover {
     color: saddlebrown;
 }
+
+/* CONTACT ME CSS */
+
 
 
