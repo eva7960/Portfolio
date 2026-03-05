@@ -3,11 +3,35 @@ body {
     background-color: rgba(250,240,230,0.75);
     margin: 0;
     padding: 0;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    justify-content: center; /* horizontal */
     align-items: center;     /* vertical */
+    flex-direction: column;
+    justify-content: center;
 }
+.navbar {
+    margin: 0;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;  /* center links horizontally */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.navbar a:hover {
+    color: saddlebrown;
+    text-decoration: underline;
+}
+
 p {
     font-family: "Arial Rounded MT Bold", sans-serif;
     font-size: 18px;
@@ -67,10 +91,11 @@ p {
     grid-template-columns: 1fr 1fr;
     width: 1000px;
     height: 700px;
-
+    flex-grow: 1;          /* Tells this div to soak up all extra vertical space */
+    align-content: center; /* Centers the grid rows vertically within that space */
 }
+
 .contactLeft h1 {
-    margin-top: 150px;
     font-size: 50px;
     font-family: "Schnyder", Georgia, serif;
 }
@@ -82,9 +107,7 @@ p {
     display: flex;
     gap: 20px;
 }
-.contactRight {
-    margin-top: 125px;
-}
+
 .contactRight p {
     margin-top: 30px;
 }
