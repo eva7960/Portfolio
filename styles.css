@@ -2,17 +2,18 @@
 * {
     box-sizing: border-box;
 }
-.body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;     /* vertical */
-}
 body {
     background-color: rgba(250,240,230,0.75);
     margin: 0;
     padding: 0;
     min-height: 100vh;
+}
+.body {
+    display: flex;
+    justify-content: center; /* horizontal centering */
+    align-items: center;     /* vertical centering */
+    flex-direction: column;
+    min-height: calc(100vh - 60px); /* optional: leave space for navbar */
 }
 .navbar {
     margin: 0;
@@ -54,32 +55,23 @@ p {
 /* HOMEPAGE CSS */
 .centerGrid {
     display: grid;
-    grid-template-columns: auto 1fr; /* makes a grid with 2 columns*/
-    place-items: center;
+    grid-template-columns: auto 1fr; /* image + text */
+    align-items: center; /* vertical alignment within the row */
+    gap: 20px;
+    max-width: 800px;
 }
-.centerGrid p {
-    margin-top: 12px;       /* Adds some space between the photo and text */
-    font-size: 20px;
-    padding-left: 10px;
-}
+
 .centerGrid img {
     border-radius: 50px;
     width: 345px;
     height: 445px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /*drop shadow*/
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* drop shadow */
+    justify-self: center;
 }
-.centerGrid div a {
-    color: black;
-    text-align: left;
-    font-size: 100px;
-    font-family: "Schnyder", Georgia, serif;
-    margin: 2rem; /*vertical spacing in between each word*/
-    text-decoration: none; /*gets rid of underline for hypertext*/
-    line-height: 145px;
-}
-.centerGrid div a:hover {
-    color: saddlebrown;
-    text-decoration: underline;
+
+.centerGrid h1 {
+    font-size: 45px;
+    color: #333;
 }
 
 
@@ -161,16 +153,3 @@ p {
 .contact a:hover {
     color: saddlebrown;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
