@@ -1,13 +1,15 @@
 /* CSS for entire website */
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;     /* vertical */
+}
 body {
     background-color: rgba(250,240,230,0.75);
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    display: flex;
-    align-items: center;     /* vertical */
-    flex-direction: column;
-    justify-content: center;
 }
 .navbar {
     margin: 0;
@@ -30,6 +32,10 @@ body {
 .navbar a:hover {
     color: saddlebrown;
     text-decoration: underline;
+}
+h1 {
+    font-size: 30px;
+    font-family: "Schnyder", Georgia, serif;
 }
 
 p {
@@ -96,6 +102,23 @@ p {
 .contactRight p {
     margin-top: 30px;
 }
+
+/* EXPERIENCE CSS */
+.wrapText {
+    margin-top: 50px;
+}
+.wrapText img {
+    float: left;
+    margin: 0px 16px 12px 250px; /* space between text and image */
+    width: 460px;
+    height: 500px;
+}
+.wrapText p {
+    margin-right: 300px;
+    line-height: 30px
+}
+
+
 
 
 
