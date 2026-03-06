@@ -108,10 +108,10 @@ p {
     margin-top: 50px;
 }
 .wrapText img {
+    border-radius: 50px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /*drop shadow*/
     float: left;
-    margin: 0px 16px 12px 250px; /* space between text and image */
-    width: 460px;
-    height: 500px;
+    margin: 0px 25px 12px 250px; /* space between text and image */
 }
 .wrapText p {
     margin-right: 300px;
