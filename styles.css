@@ -1,4 +1,7 @@
 /* CSS for entire website */
+* {
+    box-sizing: border-box;
+}
 .body {
     display: flex;
     flex-direction: column;
@@ -75,33 +78,35 @@ p {
 }
 
 
-/* CONTACT ME CSS */
-.contactBody {
+/* PROJECTS CSS */
+.projects-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 1000px;
-    height: 700px;
-    flex-grow: 1;          /* Tells this div to soak up all extra vertical space */
-    align-content: center; /* Centers the grid rows vertically within that space */
-}
-
-.contactLeft h1 {
-    font-size: 50px;
-    font-family: "Schnyder", Georgia, serif;
-}
-.contactLeft p {
-    margin-top: 50px;
-
-}
-#icons {
-    margin-top: 50px;
-    display: flex;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    border: black solid 1px;
 }
 
-.contactRight p {
-    margin-top: 30px;
+.project {
+    display: flex;
+    flex-direction: column;   /* stack image + text vertically */
+    align-items: center;      /* center horizontally */
+    text-align: center;       /* center text */
+    background: white;
+    border: 1px solid #ddd;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
+.project p {
+    text-align:left;
+    line-height: 40px;
+    font-size: 20px;
+}
+.project strong {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
 
 /* LEADERSHIP EXPERIENCE AND ABOUT ME CSS */
 .wrapText {
@@ -111,17 +116,19 @@ p {
     border-radius: 50px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /*drop shadow*/
     float: left;
-    margin: 0px 25px 12px 250px; /* space between text and image */
+    margin: 25px 12px 250px; /* space between text and image */
 }
 .wrapText p {
     margin-right: 300px;
     line-height: 30px
 }
-
-/* RESUME */
-#resumeBody {
-    overflow:hidden;
+#icons {
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
 }
+
+
 
 
 
