@@ -40,6 +40,11 @@ h1 {
     font-size: 30px;
     font-family: "Schnyder", Georgia, serif;
 }
+h2 {
+    font-size: 50px;
+    font-family: "Schnyder", Georgia, serif;
+    margin-bottom: 0;
+}
 
 p {
     font-family: "Arial Rounded MT Bold", sans-serif;
@@ -81,9 +86,10 @@ p {
 /* PROJECTS CSS */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    border: black solid 1px;
+    margin-right: 300px;
+    margin-left: 300px;
 }
 
 .project {
@@ -106,21 +112,26 @@ p {
     font-size: 20px;
     font-weight: bolder;
 }
+.project img {
+    height: 500px;
+}
 
 
 /* LEADERSHIP EXPERIENCE AND ABOUT ME CSS */
 .wrapText {
-    margin-top: 50px;
+    padding-right: 600px;
+    padding-left: 600px;
 }
 .wrapText img {
     border-radius: 50px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /*drop shadow*/
     float: left;
-    margin: 25px 12px 250px; /* space between text and image */
+    margin-right: 20px;
+    margin-bottom: 10px;
 }
 .wrapText p {
-    margin-right: 300px;
-    line-height: 30px
+    margin-top: 0;
+    line-height: 30px;
 }
 #icons {
     margin-top: 50px;
