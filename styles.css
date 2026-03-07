@@ -193,3 +193,26 @@ p {
 .contact a:hover {
     color: saddlebrown;
 }
+.expGrid {
+    display: grid;
+    grid-template-columns: 700px;
+    gap: 20px;
+    margin-right: 500px;
+    margin-left: 500px;
+    justify-content: center;
+}
+.exp {
+    display: flex;
+    flex-direction: column;   /* stack image + text vertically */
+    align-items: center;      /* center horizontally */
+    background: white;
+    border: 1px solid #ddd;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    line-height: 30px;
+}
+.exp h1 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
