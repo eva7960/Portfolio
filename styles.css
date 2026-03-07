@@ -58,9 +58,9 @@ p {
 /* HOMEPAGE CSS */
 .centerGrid {
     display: grid;
-    grid-template-columns: auto 1fr; /* image + text */
+    grid-template-columns: 1fr 1fr;
     gap: 50px;
-    max-width: 800px;
+    max-width: 1000px;
 }
 
 .centerGrid img {
