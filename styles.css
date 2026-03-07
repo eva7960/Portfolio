@@ -63,8 +63,8 @@ p {
 
 .centerGrid img {
     border-radius: 50px;
-    width: 345px;
-    height: 445px;
+    width: 410px;
+    height: 550px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* drop shadow */
     justify-self: center;
 }
@@ -72,6 +72,45 @@ p {
 .centerGrid h1 {
     font-size: 45px;
     color: #333;
+    margin:0;
+}
+.centerGrid p {
+    margin-top: 5px;
+    font-family: "Arial Rounded MT Bold", sans-serif;
+    font-size: 22px;
+    line-height: 30px;
+}
+#icons {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 equal columns */
+    gap: 20px;                            /* space between icons */
+    justify-items: center;                 /* center icons in each column */
+    align-items: center;                   /* vertical alignment */
+    margin: 40px 0;                        /* spacing above/below the row */
+}
+
+#icons img {
+    width: 60px;   /* adjust icon size */
+    height: 60px;
+    object-fit: contain;
+}
+#buttons {
+    display: flex;
+    gap: 20px;              /* space between buttons */
+    margin-top: 20px;       /* space below text */
+    flex-wrap: wrap;         /* wrap on small screens */
+    justify-content: center; /* center buttons */
+}
+#buttons a {
+    padding: 12px 30px;
+    background-color: indianred;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-family: "Arial Rounded MT Bold", sans-serif;
 }
 
 
