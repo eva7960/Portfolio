@@ -7,6 +7,8 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    font-family: "Arial Rounded MT Bold", sans-serif;
+    font-size: 18px;
 }
 .body {
     display: flex;
@@ -16,7 +18,6 @@ body {
     min-height: calc(100vh - 60px); /* optional: leave space for navbar */
 }
 .navbar {
-    margin: 0;
     top: 0;
     padding: 20px;
     width: 100%;
@@ -57,25 +58,28 @@ footer a {
 footer a:hover {
     color: saddlebrown;
 }
+h1, h2 {
+    font-family: "Schnyder", Georgia, serif;
+}
 h1 {
     font-size: 30px;
-    font-family: "Schnyder", Georgia, serif;
 }
 h2 {
     font-size: 50px;
-    font-family: "Schnyder", Georgia, serif;
     margin-bottom: 0;
 }
-
-p {
-    font-family: "Arial Rounded MT Bold", sans-serif;
-    font-size: 18px;
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
 
 /* HOMEPAGE CSS */
 .centerGrid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 50px;
     max-width: 1000px;
 }
@@ -94,7 +98,6 @@ p {
 }
 .centerGrid p {
     margin-top: 5px;
-    font-family: "Arial Rounded MT Bold", sans-serif;
     font-size: 22px;
     line-height: 30px;
 }
@@ -111,6 +114,7 @@ p {
     width: 60px;   /* adjust icon size */
     height: 60px;
     object-fit: contain;
+    border-radius: 15px;
 }
 #buttons {
     display: flex;
@@ -128,29 +132,23 @@ p {
     border-radius: 10px;
     text-align: center;
     font-size: 18px;
-    font-family: "Arial Rounded MT Bold", sans-serif;
 }
 
 
 /* PROJECTS CSS */
-.projects-grid {
+.projectGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    margin-right: 500px;
-    margin-left: 500px;
+    max-width: 1000px;
+    margin: auto;
 }
 
 .project {
     display: flex;
-    flex-direction: column;   /* stack image + text vertically */
-    align-items: center;      /* center horizontally */
-    text-align: center;       /* center text */
-    background: white;
-    border: 1px solid #ddd;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 .project p {
     text-align:left;
@@ -179,8 +177,8 @@ p {
 
 /* LEADERSHIP EXPERIENCE AND ABOUT ME CSS */
 .wrapText {
-    padding-right: 600px;
-    padding-left: 600px;
+    padding-right: 400px;
+    padding-left: 400px;
     padding-bottom: 300px;
 }
 .wrapText img {
@@ -204,6 +202,7 @@ p {
 }
 .iconGrid img {
     background-color: white;
+    border-radius: 15px;
 }
 .contact a {
     text-align: left;
@@ -217,19 +216,14 @@ p {
     display: grid;
     grid-template-columns: 1000px;
     gap: 20px;
-    margin-right: 500px;
-    margin-left: 500px;
+    max-width: 1000px;
+    margin: auto;
     justify-content: center;
 }
 .exp {
     display: flex;
-    flex-direction: column;   /* stack image + text vertically */
-    align-items: center;      /* center horizontally */
-    background: white;
-    border: 1px solid #ddd;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    align-items: center;
     line-height: 30px;
 }
 .exp h1 {
@@ -237,6 +231,7 @@ p {
     padding-bottom: 0;
 }
 .exp img {
-    height: 600px;
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
 }
