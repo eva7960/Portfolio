@@ -9,7 +9,6 @@ body {
     min-height: 100vh;
     font-family: "Arial Rounded MT Bold", sans-serif;
     font-size: 18px;
-    line-height: 25px;
 }
 .body {
     display: flex;
@@ -68,6 +67,7 @@ h1 {
 h2 {
     font-size: 50px;
     margin-bottom: 0;
+    margin-top: 0;
 }
 .card {
     background: white;
@@ -142,6 +142,8 @@ h2 {
     gap: 25px;
     max-width: 1400px;
     margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .project {
@@ -185,10 +187,9 @@ h2 {
 
 /* LEADERSHIP EXPERIENCE AND ABOUT ME CSS */
 .wrapText {
-    padding-right: 300px;
-    padding-left: 300px;
-    padding-bottom: 50px;
-
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 .wrapText img {
     border-radius: 50px;
@@ -230,6 +231,8 @@ h2 {
     max-width: 1000px;
     margin: auto;
     justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 .exp {
     display: flex;
