@@ -9,6 +9,7 @@ body {
     min-height: 100vh;
     font-family: "Arial Rounded MT Bold", sans-serif;
     font-size: 18px;
+    line-height: 25px;
 }
 .body {
     display: flex;
@@ -187,6 +188,7 @@ h2 {
     padding-right: 300px;
     padding-left: 300px;
     padding-bottom: 50px;
+
 }
 .wrapText img {
     border-radius: 50px;
@@ -244,4 +246,24 @@ h2 {
     max-width: 1000px;
     height: auto;
     border-radius: 15px;
+}
+
+/* RESUME CSS */
+.downloadBtn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: indianred;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 18px;
+    margin: 40px 0 80px 0;
+    justify-self: center;
+}
+.downloadBtn:hover {
+    background-color: lightpink;
+}
+#resButton {
+    text-align: center;
 }
