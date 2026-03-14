@@ -18,6 +18,10 @@ body {
     flex-direction: column;
     min-height: calc(100vh - 60px); /* optional: leave space for navbar */
 }
+
+
+
+/* navigation bar */
 .navbar, footer {
     padding: 20px;
     width: 100%;
@@ -35,11 +39,21 @@ body {
 .navbar a:hover, footer a:hover {
     color: indianred;
 }
+
+
+
+
+/* footer */
 footer {
     flex-direction: column; /* stack headings, paragraphs vertically */
     align-items: center;    /* center horizontally */
     line-height: 0.3;
 }
+
+
+
+
+/* headings, images, and bold */
 h1, h2 {
     margin-bottom: 0;
     line-height: 1.2;
@@ -62,34 +76,29 @@ img {
     border-radius: 15px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* drop shadow */
 }
+
+
+
+
+/* card layout aesthetic */
 .card {
     background: white;
     padding: 25px;
     border-radius: 15px;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
+
+
+
+/* grids for icons */
 .iconGrid {
     display: grid;
     gap: 20px;                            /* space between icons */
     justify-items: center;                 /* center icons in each column */
     align-items: center;                   /* vertical alignment */
 }
-.grid {
-    display: grid;
-    flex-direction: column;
-    gap: 30px;
-    padding: 30px 0;
-    margin: auto;
-}
-.oneColGrid {
-    grid-template-columns: 1fr;
-    max-width: 1000px;
-}
-.twoColGrid {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 1400px;
-}
 
+/* CSS for skills icons on home page */
 .skills {
     grid-template-columns: repeat(6, 1fr); /* 6 equal columns */
     margin: 40px 0;                        /* spacing above/below the row */
@@ -100,6 +109,38 @@ img {
     height: 60px;
 }
 
+/* CSS for social media icons on footer */
+.socials {
+    grid-template-columns: repeat(3, 60px); /* 3 equal columns for the icons */
+    margin-top: 20px;
+}
+.socials img {
+    background-color: white;
+}
+
+
+
+/* reusable grid layout */
+.grid {
+    display: grid;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 0;
+    margin: auto;
+}
+
+
+/* CSS for one or two column grids */
+.oneColGrid {
+    grid-template-columns: 1fr;
+    max-width: 1000px;
+}
+.twoColGrid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1400px;
+}
+
+/* CSS for buttons */
 .buttons {
     display: flex;
     gap: 20px;              /* space between buttons */
@@ -120,10 +161,14 @@ img {
     color:lightpink;
 }
 
+
+/*CS for home page grid to control container width */
 .home {
     max-width: 1000px;
 }
-/* PROJECTS CSS */
+
+
+/* CSS for projects page */
 .project img {
     width: 100%;
 }
@@ -132,7 +177,10 @@ img {
     margin-top: 0;
     margin-bottom: 20px;
 }
-/* LEADERSHIP EXPERIENCE AND ABOUT ME CSS */
+
+
+
+/* CSS for about me page */
 .wrapText {
     max-width: 1000px;
     margin: 40px auto;
@@ -145,18 +193,13 @@ img {
     width: 400px;
     height: 500px;
 }
-.socials {
-    grid-template-columns: repeat(3, 60px); /* 3 equal columns for the icons */
-    margin-top: 20px;
-}
-.socials img {
-    background-color: white;
-}
 
+/* CSS for headings on experience page */
 .exp h2 {
     text-align: center;
 }
 
+/* CSS for download resume button on resume page. Makes it so button isn't touching footer */
 .resBtn {
     margin-bottom: 20px;
 }
