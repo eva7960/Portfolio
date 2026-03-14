@@ -8,7 +8,8 @@ body {
     padding-bottom: 0;
     min-height: 100vh;
     font-family: "Arial Rounded MT Bold", sans-serif;
-    font-size: 18px;
+    font-size: 22px;
+    line-height: 1.6;
 }
 .body {
     display: flex;
@@ -17,8 +18,7 @@ body {
     flex-direction: column;
     min-height: calc(100vh - 60px); /* optional: leave space for navbar */
 }
-.navbar {
-    top: 0;
+.navbar, footer {
     padding: 20px;
     width: 100%;
     background-color: black;
@@ -26,48 +26,41 @@ body {
     justify-content: right;  /* center links horizontally */
     gap: 20px;
 }
-
-.navbar a {
+.navbar a, footer a {
     color: white;
     text-decoration: none;
-    font-size: 20px;
     font-weight: bold;
 }
 
-.navbar a:hover {
+.navbar a:hover, footer a:hover {
     color: indianred;
-    text-decoration: underline;
 }
 footer {
-    display: flex;
     flex-direction: column; /* stack headings, paragraphs vertically */
     align-items: center;    /* center horizontally */
-    justify-content: center; /* center vertically if footer height is bigger */
-    background-color: black;
-    color: white;
-    padding: 20px;
-}
-footer u {
-    font-size: 20px;
-}
-footer a {
-    font-size: 20px;
-    color: white;
-    text-decoration: none;
-}
-footer a:hover {
-    color: indianred;
+    line-height: 0.3;
 }
 h1, h2 {
+    margin-bottom: 0;
+    line-height: 1.2;
     font-family: "Schnyder", Georgia, serif;
 }
 h1 {
-    font-size: 30px;
+    font-size: 40px;
 }
 h2 {
-    font-size: 50px;
-    margin-bottom: 0;
-    margin-top: 0;
+    font-size: 30px;
+}
+h2 a {
+    color:black;
+}
+strong {
+    font-size: 20px;
+    font-weight: bolder;
+}
+img {
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* drop shadow */
 }
 .card {
     background: white;
@@ -76,31 +69,22 @@ h2 {
     box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
 
-/* HOMEPAGE CSS */
-.centerGrid {
+.grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 0;
+    margin: auto;
+}
+.oneColGrid {
+    grid-template-columns: 1fr;
     max-width: 1000px;
 }
-
-.centerGrid img {
-    border-radius: 50px;
-    width: 465px;
-    height: 610px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* drop shadow */
+.twoColGrid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1400px;
 }
 
-.centerGrid h1 {
-    font-size: 45px;
-    color: #333;
-    margin:0;
-}
-.centerGrid p {
-    margin-top: 5px;
-    font-size: 22px;
-    line-height: 35px;
-}
 #icons {
     display: grid;
     grid-template-columns: repeat(6, 1fr); /* 6 equal columns */
@@ -113,78 +97,39 @@ h2 {
 #icons img {
     width: 60px;   /* adjust icon size */
     height: 60px;
-    object-fit: contain;
-    border-radius: 15px;
 }
-#buttons {
+
+.buttons {
     display: flex;
     gap: 20px;              /* space between buttons */
     margin-top: 20px;       /* space below text */
     flex-wrap: wrap;         /* wrap on small screens */
     justify-content: center; /* center buttons */
 }
-#buttons a {
-    padding: 12px 30px;
-    background-color: indianred;
+.buttons a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 10px;
+    padding: 12px 30px;
+    background-color: indianred;
     text-align: center;
-    font-size: 18px;
+    border-radius: 15px;
+}
+.buttons a:hover {
+    color:lightpink;
 }
 
-
+.home {
+    max-width: 1000px;
+}
 /* PROJECTS CSS */
-.projectGrid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    max-width: 1400px;
-    margin: auto;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.project {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    height: 100%;
-}
-.project p {
-    text-align:left;
-    line-height: 30px;
-    font-size: 18px;
-}
-.project strong {
-    font-size: 20px;
-    font-weight: bolder;
-}
 .project img {
     width: 100%;
     height: 400px;
-    object-fit: cover;
-    border-radius: 10px;
 }
-.project h1 {
+.project h2 {
     text-align: center;
 }
-
-.project h1 a {
-    font-size: 30px;
-    font-family: "Schnyder", Georgia, serif;
-    margin-bottom: 0;
-    color: black;
-    text-decoration: none;
-}
-.project h1 a:hover {
-    color: indianred;
-    text-decoration: underline;
-}
-
-
 /* LEADERSHIP EXPERIENCE AND ABOUT ME CSS */
 .wrapText {
     max-width: 1000px;
@@ -192,19 +137,13 @@ h2 {
     padding: 0 20px;
 }
 .wrapText img {
-    border-radius: 50px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /*drop shadow*/
     float: left;
     margin-right: 15px;
     margin-bottom: 5px;
     width: 400px;
     height: 500px;
 }
-.wrapText p {
-    margin-top: 0;
-    line-height: 30px;
-}
-.iconGrid {
+.socialGrid {
     display: grid;
     grid-template-columns: repeat(3, 60px); /* 3 equal columns for the icons */
     gap: 20px;       /* spacing between icons */
@@ -212,61 +151,10 @@ h2 {
     align-items: center;     /* centers icons vertically if needed */
     margin-top: 20px;
 }
-.iconGrid img {
+.socialGrid img {
     background-color: white;
-    border-radius: 15px;
-}
-.contact a {
-    text-align: left;
-    font-size: 20px;
-    color: white;
-}
-.contact a:hover {
-    color: indianred;
-}
-.expGrid {
-    display: grid;
-    grid-template-columns: 1000px;
-    gap: 20px;
-    max-width: 1000px;
-    margin: auto;
-    justify-content: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-.exp {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 30px;
-}
-.exp h1 {
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-.exp img {
-    width: 100%;
-    max-width: 1000px;
-    height: auto;
-    border-radius: 15px;
 }
 
-/* RESUME CSS */
-.downloadBtn {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: indianred;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 10px;
-    font-size: 18px;
-    margin: 40px 0 80px 0;
-    justify-self: center;
-}
-.downloadBtn:hover {
-    background-color: lightpink;
-}
-#resButton {
+.exp h2 {
     text-align: center;
 }
