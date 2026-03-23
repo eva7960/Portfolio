@@ -17,11 +17,13 @@ p {
 
 /* navigation bar */
 .navbar, footer {
+    position: relative;   /* default is fine too */
+    width: 100vw;         /* full viewport width */
+    left: 0;              /* start from left edge */
     padding: 20px;
-    width: 100%;
     background-color: black;
     display: flex;
-    justify-content: right;
+    justify-content: flex-end; /* instead of 'right' */
     gap: 20px;
 }
 .navbar a, footer a {
@@ -135,8 +137,11 @@ img {
 
 /* CSS for one or two column grids */
 .oneColGrid {
+    display: grid;
     grid-template-columns: 1fr;
+    gap: 30px;
     max-width: 1000px;
+    margin: auto;
 }
 .twoColGrid {
     grid-template-columns: repeat(2, 1fr);
