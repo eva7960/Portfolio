@@ -8,8 +8,11 @@ body {
     padding-bottom: 0;
     min-height: 100vh; /* so body is at least full screen height */
     font-family: "Arial Rounded MT Bold", sans-serif;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1.6;
+}
+p {
+    margin-top: 10px;
 }
 
 /* navigation bar */
@@ -46,8 +49,14 @@ h1, h2 {
     line-height: 1.2;
     font-family: "Schnyder", Georgia, serif;
 }
+h1 a, h2 a {
+    color:black;
+}
+h1 a:hover, h2 a:hover {
+    font-size: 35px;
+}
 h1 {
-    font-size: 40px;
+    font-size: 75px;
 }
 h2 {
     font-size: 30px;
@@ -163,16 +172,50 @@ img {
 
 
 /* CSS for projects page */
+.project {
+    display: flex;
+    flex-direction: column;
+}
 .project img {
     width: 100%;
+    height: 350px;
+    object-fit: cover;
 }
 .project h2 {
     text-align: center;
-    margin-top: 0;
-    margin-bottom: 20px;
+    margin: 10px;
 }
 
+.tools, projBtns {
+    display: flex;
+    flex-wrap: wrap;       /* THIS is what makes it flexible */
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: auto;
+}
 
+.tools span {
+    padding: 6px 14px;
+    border-radius: 15px;
+    color: white;
+    background-color: indianred;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.projBtns a {
+    display: inline-block;
+    padding: 6px 14px;
+    text-decoration: none;
+    color: black;
+    border: 2px solid indianred;
+    border-radius: 10px;
+}
+
+.projBtns a:hover {
+    background-color: rgba(255,133,133,0.43);
+}
 
 /* CSS for about me page */
 .wrapText {
@@ -188,9 +231,13 @@ img {
     height: 500px;
 }
 
-/* CSS for headings on experience page */
+/* CSS for headings and images on experience page */
 .exp h2 {
     text-align: center;
+}
+
+.exp img {
+    width: 1000px;
 }
 
 /* CSS for download resume button on resume page. Makes it so button isn't touching footer */
